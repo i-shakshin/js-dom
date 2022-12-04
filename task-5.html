@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <style>
+      body {
+        padding-top: 30px;
+      }
+      label,
+      input {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Введите значение радиуса и вычислится объем сферы.</p>
+    <form action="" method="post" id="MyForm">
+      <label for="radius">Радиус</label
+      ><input type="text" name="radius" id="radius" required />
+      <label for="volume">Объем</label
+      ><input type="text" name="volume" id="volume" />
+      <input type="submit" value="Вычислить" id="submit" />
+    </form>
+    <script>
+      function getVolume() {
+        var volume;
+        var radius = document.getElementById("radius").value;
+        radius = Math.abs(radius);
+        volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
+        volume = volume.toFixed(4);
+        document.getElementById("volume").value = volume;
+        return false;
+      }
+      window.onload = document.getElementById("MyForm").onsubmit = getVolume;
+    </script>
+  </body>
+</html>

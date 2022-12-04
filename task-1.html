@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <p id="text">JavaScript - Хороший язык</p>
+    <div>
+      <button id="btn" onclick="changeColor()">Стилизовать</button>
+    </div>
+    <script>
+      function changeColor() {
+        const style = document.createElement("style");
+        style.innerHTML = "#text {font-weight: bold;}";
+        document.querySelector("head").appendChild(style);
+      }
+    </script>
+  </body>
+</html>
