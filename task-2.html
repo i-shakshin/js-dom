@@ -1,4 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
   <body>
     <table id="some-table">
       <tr>
@@ -14,12 +21,12 @@
     <input type="button" onclick="insertRow()" value="Вставить Строку" />
     <script>
       function insertRow() {
-        let table = document.getElementById("some-table");
+        const table = document.getElementById("some-table");
 
-        let row = document.createElement("tr");
+        const row = document.createElement("tr");
 
-        let c1 = document.createElement("td");
-        let c2 = document.createElement("td");
+        const c1 = document.createElement("td");
+        const c2 = document.createElement("td");
 
         c1.innerText = "Строка3 столбец1";
         c2.innerText = "Строка3 столбец2";
