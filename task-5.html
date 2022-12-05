@@ -1,5 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
       body {
         padding-top: 30px;
@@ -21,15 +26,19 @@
     </form>
     <script>
       function getVolume() {
-        var volume;
-        var radius = document.getElementById("radius").value;
-        radius = Math.abs(radius);
-        volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
-        volume = volume.toFixed(4);
-        document.getElementById("volume").value = volume;
+        const radius = document.getElementById("radius").value;
+        const modRadius = Math.abs(radius);
+        const volume = (4 / 3) * Math.PI * Math.pow(modRadius, 3);
+        document.getElementById("volume").value = volume.toFixed(4);
         return false;
       }
-      window.onload = document.getElementById("MyForm").onsubmit = getVolume;
+
+      window.addEventListener("load", (event) => {
+        getVolume();
+      });
+      window.addEventListener("load", (event) => {
+        document.getElementById("MyForm").onsubmit = getVolume;
+      });
     </script>
   </body>
 </html>
